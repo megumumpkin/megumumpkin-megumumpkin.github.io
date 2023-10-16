@@ -35,6 +35,11 @@ function updateHomeHead()
     }
 }
 
+function startHomeHead(dom_id)
+{
+    document.getElementById(dom_id).classList.add('ready');
+}
+
 setInterval(function(){
     if(home_head_elements.length > 1) updateHomeHead();
 }, 6000);

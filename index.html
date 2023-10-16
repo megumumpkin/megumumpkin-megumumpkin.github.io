@@ -46,7 +46,16 @@
 
         <div class="home head" style="background-color: black;">
             
-            <a id="home_head_0"href="/0" ><img src="https://gitlab.gnome.org/GNOME/gnome-backgrounds/-/raw/main/backgrounds/adwaita-d.jpg?ref_type=heads&inline=false"></img></a>
+            <a 
+                id="home_head_0"
+                href="" 
+                
+                onload="startHomeHead('home_head_0')">
+                    <img 
+                        id="home_head_bnr_0" 
+                        src="https://gitlab.gnome.org/GNOME/gnome-backgrounds/-/raw/main/backgrounds/adwaita-d.jpg?ref_type=heads&inline=false" 
+                        onload="startHomeHead('home_head_bnr_0')"></img>
+            </a>
             
             <div class="newsbar">
                 <p class="label">News</p>
@@ -179,8 +188,7 @@
     </div>
 </div>
         <div class="background">
-    <img class="align-bottom bottom-0" src="/assets/images/bg-bottom-0.svg"></img>
-    <img class="align-bottom bottom-1" src="/assets/images/bg-bottom-1.svg"></img>
+    <img class="align-right bottom-0" src="/assets/images/bg-bottom-0.svg"></img>
 </div>
     </body>
     <script type="text/javascript" src="/assets/js/home.js"></script>
