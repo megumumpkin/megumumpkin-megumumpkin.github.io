@@ -36,5 +36,5 @@ function updateHomeHead()
 }
 
 setInterval(function(){
-    updateHomeHead();
+    if(home_head_elements.length > 1) updateHomeHead();
 }, 6000);
