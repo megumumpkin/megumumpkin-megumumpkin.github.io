@@ -19,8 +19,6 @@
             
             <a class="nav" href="/list-blog.html"><div>BLOG</div></a>
             
-            <a class="nav" href="/skilltree.html"><div>SKILLTREE</div></a>
-            
             <a class="nav" href="/search.html"><div><i class="icon icon_edit-find"></i></div></a>
         </div>
         <a class="nav nav-mobile" onclick="toggleNavOverlay()"><div><i class="icon icon_application-menu"></i></div></a>
@@ -36,8 +34,6 @@
         <a href="/list-software.html"><div>SOFTWARE</div></a>
         
         <a href="/list-blog.html"><div>BLOG</div></a>
-        
-        <a href="/skilltree.html"><div>SKILLTREE</div></a>
         
     </div>
     <script type="text/javascript" src="/assets/js/nav.js"></script>
@@ -60,9 +56,71 @@
         </div>
         <div class="post-contain" style="margin-bottom: 60pt;">
             <div class="blog content">
-                <p>Ever wonder how did the sky in anime can glow that good? It is done through a process in digital videomaking called compositing, and luckily OpenToonz has the right tools for the job.</p>
+                <p>Ever wonder how did the sky in anime can glow that good? It is done through a process in digital video editing called compositing, and luckily OpenToonz has the right tools for the job!</p>
 
 <p><img src="https://nch.pl/s/F9ti2S6GKP4B3oK/preview" alt="" /></p>
+
+<p>Let’s start with the setup, here’s a scene I’m currently working with all the background layers and the main character of the scene has been set up.</p>
+
+<p><img src="https://nch.pl/s/kAfGq5mB8bdptMj/preview" alt="" /></p>
+
+<p>We can see that in that scene there are a foreground layer with the name <code>Finish</code>, which is the place we have our character being rendered on screen, <code>Anisketch</code>, <code>Lines</code> are the layers I use to do the sketchy sakuga and some linework for the characters before being finalized in color fill. <code>ColorCardFX</code> and  <code>LinearGradient2</code> is a layer that is added during composition which I’m going to explain further.</p>
+
+<p>For the backgrounds I made it into 4 layers, like <code>BG0</code>, <code>BG1</code>, <code>BG2</code>, and <code>BG3</code>, this is because <code>BG1</code> and <code>BG2</code> is supposed to be scrolling as they’re cloud layers and has the sky there has wind in that scene. This is also the hey element for determining the sky bloom areas, so keep that in mind for a bit.</p>
+
+<p>In OpenToonz, the compositing process lies on the room named <code>Schematic</code>, you can see which editors are put within this room with the screenshot below, mind you I’m using the default rooms from installation so you need to take note the specific editor shown in the screenshot below!</p>
+
+<p><img src="https://nch.pl/s/dBd9EdK3H7LDooD/preview" alt="" /></p>
+
+<p>The most important element here is the <code>FX Schematic</code> editor, this is where we can add custom effects to your own scenes. They work similiarly to common compositing software like Blender, Natron, Nuke, etc. Because of the similiarity if you’re an user of the software I’ve just mentioned it should be very easy to do! But without further ado let’s get on with making the bloom effect works in your scenes!</p>
+
+<p>So let’s start with a basic composition with a new scene and a similiar layer setup, so that we’ll have the default node setup where we hasn’t gone to do the compositing on our scenes yet.</p>
+
+<p><img src="https://nch.pl/s/ngpHdw7Gfte4oKW/preview" alt="" /></p>
+
+<p>Above should be the layer setup for this scene, with this the initial setup should be done, next up is to go straight up to the composition work, with that we go to the <code>Schematic</code> room, especially the <code>FX Schematic</code> editor. Down below is the initial node layout for the current scene.</p>
+
+<p><img src="https://nch.pl/s/y3L2EyDpDoogckq/preview" alt="" /></p>
+
+<p>So first up we need to gather all the sky layers into one, you can do this by adding an <code>over</code> blend to the schematic, you can do this by <code>right mouse click &gt; Add FX &gt; Layer_Blending &gt; Over</code> like the screenshot below. Do it in the other that the first source should be the layer above the layer below, so in here it’s <code>Col3</code> &gt; <code>Col2</code> &gt; <code>Col1</code>.</p>
+
+<p><img src="https://nch.pl/s/BXwnT2omoZeKbtm/preview" alt="" /></p>
+
+<p><img src="https://nch.pl/s/f72wwoaCG6DQKK7/preview" alt="" /></p>
+
+<p>After that we combine this with the <code>Col4</code> and <code>Col5</code> (the window layer), which serves as the obstructor of the background bloom, to do that we need a new <code>Over</code> blending.</p>
+
+<p><img src="https://nch.pl/s/ygiaff3skns4MgF/preview" alt="" /></p>
+
+<p>So with this we have both the sky source and the obstructores from the combined layers, next up is to set the obstructors to actually obstruc the sky. To do this we need the obstructors to be drawn pure black, which can be done by adding <code>Brightness Contrast</code> node from <code>right mouse click &gt; Add FX &gt; Image_Adjust &gt; Brightness Contrast</code>.</p>
+
+<p><img src="https://nch.pl/s/yBpW6Gs9HiC2nxL/preview" alt="" /></p>
+
+<p>After the node has been added, please connect the source with the <code>Over</code> node which contains the obstructors and then double click the node to show the properties, and set up the values of the brightness and contrast like the image below.</p>
+
+<p><img src="https://nch.pl/s/fw3txoqxbA7WXZF/preview" alt="" /></p>
+
+<p>Now we’re going to combine both the obstructor and the sky, you can do that by using a new <code>Over</code> node to combine both, make sure that the obstructor is above the sky in order.</p>
+
+<p><img src="https://nch.pl/s/bLgxsadtoqnXaPf/preview" alt="" /></p>
+
+<p>Next up is to create the blur for the bloom effect to sell, so you can do that by adding a <code>Blur</code> node (<code>right mouse click &gt; Add FX &gt; Blur &gt; Blur</code>) with the combined obstructor and sky as the input, and set up the blur value however you want though mine will be like on the two pictures below.</p>
+
+<p><img src="https://nch.pl/s/cWExBti6EiDfgtk/preview" alt="" /></p>
+
+<p><img src="https://nch.pl/s/DDiB2iQXCcJdrGM/preview" alt="" /></p>
+
+<p><img src="https://nch.pl/s/Ex9KKgr8zLn3MEC/preview" alt="" /></p>
+
+<p>Next is to adjust the brightness of the bloom, we’re going to do this by using a new <code>Brightness Contrast</code> node with the blurred node in the previous step. This will make it easy to manage the intensity of the bloom before we’re going to finally combine the bloom and the main output.</p>
+
+<p><img src="https://nch.pl/s/dXCzsF6kwtKzNWg/preview" alt="" /></p>
+
+<p>Finally, we combine both of the bloom and the main output using the <code>Addition</code> node from <code>right mouse click &gt; Add FX &gt; Layer_Blending &gt; Addition</code>, make sure that the bloom is on <code>Source2</code> and the main output is on <code>Source1</code>. And with that you got a sky bloom in your scene and that concludes this guide, thank you for reading!</p>
+
+<p><img src="https://nch.pl/s/4B4zbZkDzorBPZd/preview" alt="" /></p>
+
+<p><img src="https://nch.pl/s/7yLPmCC9nE9gkfj/preview" alt="" /></p>
 
             </div>
         </div>
@@ -77,8 +135,6 @@
             <a href="/list-software.html">SOFTWARE</a>
             
             <a href="/list-blog.html">BLOG</a>
-            
-            <a href="/skilltree.html">SKILLTREE</a>
             
             <a href="/linktree.html">LINKTREE</a>
             
