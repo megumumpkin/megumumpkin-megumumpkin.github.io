@@ -36,7 +36,7 @@
 
 body { background-color: black; color: white; }
 
-body { font-family: 'FrankoLight'; font-weight: normal; font-style: normal; font-size: 13pt; margin: 0px; }
+body { font-family: 'FrankoLight'; font-weight: normal; font-style: normal; font-size: 13pt; margin: 0px; min-height: 100vh; display: flex; flex-direction: column; }
 
 @media only screen and (max-width: 400px) { body { font-size: 11pt; } }
 
@@ -86,11 +86,13 @@ b { font-family: 'FrankoBold'; }
 
 .always-on-top { position: relative; z-index: 990; }
 
-.post-contain { max-width: 900pt; margin: 20pt auto; }
+.post-contain { width: 900pt; margin: 20pt auto; }
 
 .post-contain div { margin: 0 35pt; }
 
 .post-contain div.no-remargin { margin: initial; }
+
+@media only screen and (max-width: 1300px) { .post-contain { max-width: 900pt; } }
 
 .trim { margin: auto; padding: 0; }
 
@@ -126,9 +128,9 @@ a.nav div i { font-size: 20pt; }
 
 .tag-container { flex-wrap: wrap; gap: 5pt; }
 
-div.footer { width: 100%; height: 300pt; background-color: rgba(255, 255, 255, 0.05); }
+div.footer { margin: auto 0 0 0; width: 100%; padding-top: 50px; padding-bottom: 100px; background-color: rgba(255, 255, 255, 0.05); }
 
-div.footer div.container { margin: 0 auto; max-width: 1000pt; height: 100%; }
+div.footer div.container { margin: 0 auto; max-width: 1000pt; }
 
 div.footer div.container div.pane { margin-top: auto; margin-bottom: auto; }
 
