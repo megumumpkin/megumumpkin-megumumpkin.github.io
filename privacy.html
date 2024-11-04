@@ -13,7 +13,8 @@
     <body>
         <nav>
     <div class="nav-mobile-padding"></div>
-    <div class="fill-width flex-horizontal always-on-top nav-floatable" style="padding: 0 20pt;">
+    <div class="flex-horizontal always-on-top nav-floatable">
+        <div class="nav-pad"></div>
         <div class="flex-horizontal nav-desktop">
             
             <a class="nav" href="/"><div>HOME</div></a>
@@ -25,7 +26,9 @@
             <a class="nav" href="/search.html"><div><i class="icon icon_edit-find"></i></div></a>
         </div>
         <a class="nav nav-mobile" onclick="toggleNavOverlay()"><div><i class="icon icon_application-menu"></i></div></a>
-        <a class="nav align-right" href="/"><div>MEGUMUMPKIN</div></a>
+        <div class="nav-spacer"></div>
+        <a class="nav" href="/"><div>MEGUMUMPKIN</div></a>
+        <div class="nav-pad"></div>
     </div>
     <div id="nav-overlay" class="nav-overlay flex-vertical hidden">
         <div class="nav-mobile-padding"></div>
@@ -38,7 +41,13 @@
         
     </div>
     <script type="text/javascript" src="/assets/js/nav.js"></script>
+    <script>
+        document.addEventListener('scroll', () => {
+            document.documentElement.dataset.scroll = window.scrollY;
+        });
+    </script>
 </nav>
+
         <div class="post-contain" style="margin-bottom: 60pt;">
             <div class="blog content">
                 <h2> Privacy Policy </h2>
