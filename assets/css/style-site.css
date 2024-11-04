@@ -132,6 +132,8 @@ a.nav div i { font-size: 20pt; }
 
 .nav-pad { margin-left: 20px; }
 
+.nav-pad-v { margin-bottom: 20px; }
+
 .tag { padding: 6pt 5pt 4pt 5pt !important; background-color: #242424 !important; font-family: 'FrancoBold' !important; font-size: 11pt !important; }
 
 .tag-container { flex-wrap: wrap; gap: 5pt; }
