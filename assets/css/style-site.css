@@ -86,13 +86,15 @@ b { font-family: 'FrankoBold'; }
 
 .always-on-top { position: relative; z-index: 990; }
 
-.post-contain { max-width: 900pt; margin: 20pt auto; }
+.post-contain { margin: 20pt auto; }
 
 .post-contain div { margin: 0 35pt; }
 
 .post-contain div.no-remargin { margin: initial; }
 
 @media only screen and (min-width: 1300px) { .post-contain { width: 900pt; } }
+
+@media only screen and (max-width: 1300px) { .post-contain { width: 100vw; } }
 
 .trim { margin: auto; padding: 0; }
 
@@ -134,7 +136,7 @@ a.nav div i { font-size: 20pt; }
 
 .nav-pad-v { margin-bottom: 20px; }
 
-.tag { padding: 6pt 5pt 4pt 5pt !important; background-color: #242424 !important; font-family: 'FrancoBold' !important; font-size: 11pt !important; }
+.tag { padding: 6pt 5pt 4pt 5pt !important; margin-top: 0; margin-bottom: 0; background-color: #242424 !important; font-family: 'FrancoBold' !important; font-size: 11pt !important; }
 
 .tag-container { flex-wrap: wrap; gap: 5pt; }
 
@@ -365,6 +367,10 @@ div.blog.banner div h3 { margin: auto 35pt; }
 div.blog.banner.compact { height: 90pt; }
 
 div.blog.banner.compact img { grid-row: 1; grid-column: 1; width: 100%; height: 90pt; }
+
+div.blog.info { display: flex; flex-direction: row; }
+
+@media only screen and (min-width: 600px) { div.blog.info .spacer { flex-grow: 1; } }
 
 div.blog.content img { margin: 20pt auto 0 auto; object-fit: contain; width: 100%; max-height: 90vh; }
 
