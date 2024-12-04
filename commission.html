@@ -25,6 +25,8 @@
             
             <a class="nav" href="/list-blog.html"><div>BLOG</div></a>
             
+            <a class="nav" href="/commission.html"><div>COMMISSION</div></a>
+            
             <a class="nav" href="/search.html"><div><i class="icon icon_edit-find"></i></div></a>
         </div>
         <a class="nav nav-mobile" onclick="toggleNavOverlay()"><div><i class="icon icon_application-menu"></i></div></a>
@@ -44,6 +46,9 @@
         <a href="/list-blog.html"><div>BLOG</div></a>
         <div class="nav-pad-v"></div>
         
+        <a href="/commission.html"><div>COMMISSION</div></a>
+        <div class="nav-pad-v"></div>
+        
     </div>
     <script type="text/javascript" src="/assets/js/nav.js"></script>
     <script>
@@ -55,44 +60,113 @@
         });
     </script>
 </nav>
+<script src="https://storage.ko-fi.com/cdn/scripts/overlay-widget.js"></script>
+<script>
+  kofiWidgetOverlay.draw('megumumpkin', {
+    'type': 'floating-chat',
+    'floating-chat.donateButton.text': 'Support me',
+    'floating-chat.donateButton.background-color': '#ff0000',
+    'floating-chat.donateButton.text-color': '#fff',
+    'floating-chat.core.position.bottom-left': 'position: fixed; bottom: 50px; right: 10px; width: 160px; height: 65px;'
+  });
+</script>
+<style>
+    .floatingchat-container-wrap { left: unset; right: 50px; width: 50%; }
+    .floatingchat-container-wrap-mobi { left: unset; right: 50px; width: 50%;}
+    .floating-chat-kofi-popup-iframe { left: unset; right: 50px; }
+    .floating-chat-kofi-popup-iframe-mobi { left: unset; right: 50px; }
+    .floating-chat-kofi-popup-iframe-closer-mobi { left: unset; right: 50px; }
+</style>
+
 
         <div class="post-contain" style="margin-bottom: 60pt;">
             <div class="blog content">
                 <h2> COMMISSION </h2>
                 <p> Before ordering your commission, you should please read the <a href="#TOS">Terms of Service</a> in this page down below. </p>
-                <b> I won't accept commissions for NSFW, Furry, and Mecha works.</b>
-                <h3> Available Now: Character Portraits </h3>
-                <img src="https://nch.pl/s/zXGxg3WrPDTxTDb/preview" style="max-height: 60vh !important;">
-                <p> I'll make you character portraits in the style and pose like in the example provided above. Characters will be fully rendered with simple textured backgrounds, which is good for profile pictures for example. </p>
+                <b> I won't accept commissions for NSFW, Furry, and Mecha works. </b>
+                <p> All commissions are now done through VGen! </p>
                 <br>
-                <br>
-                <a class="button big" href="https://ko-fi.com/c/cfcc4a8729">
+                <a class="button big" href="https://vgen.co/megumumpkin">
                     GO TO THE COMMISSION PAGE
                 </a>
                 <br>
                 <br>
                 <h3 id="TOS"> Terms of Service </h3>
-                <h4> Process </h4>
-                <p><b>You need to have a Ko-Fi account first since the payment for the commission will be done through Ko-Fi.</b>
-                We'll start the commission by you first discuss what you want from the commission through the chat in the Ko-Fi commission page.</p>
-                <p>After we have an agreement on what to be drawn for the commission <b>you can purchase with the price listed on the commission listing.</b>
-                When the purchase of said commission has been confirmed I'll start drawing your commission, this will take around 1-20 days accounting
-                others who also have purchased this service, for each artwork it'll be done in around 1-3 days per commission.
-                </p>
-                <p>Along the time I'll be working on your piece, I'll send you the WIP (Work in Progress) for each illustration passes being done.
-                This'll help you confirm on the progress and also gives more specific directions that you want on the illustration along the way.
-                But mind you if you want changes from the ground up or the overall layout of the illustration is largely changed, <b>I won't comply with those changes.</b>
-                </p>
-                <p>When the illustration commission has been deemed as done, I'll be putting up the finished commission on your commission queue in Ko-Fi.
-                I'll notify you when it's done through your DM in socials or Discord.</p>
-                <h4> Payments </h4>
-                <p>All commission payments will be done through my Ko-Fi's commission listings.</p>
-                <h4> Edits </h4>
-                <p>I'll only comply for smaller changes that does not change the overall piece, any large changes like overall composition is something that I won't comply.</p>
-                <h4> Copyright </h4>
-                <p>I have the full copyright of the commission. You cannot profit from the work that I've made, I'll only allow usages for personal use or non profit causes.</p>
-                <h4> Refusal </h4>
-                <p>I won't accept commissions for NSFW, Furry, and Mecha work.</p>
+                <h4 id="general">GENERAL</h4>
+                <ul>
+                <li><p>Must be 18+ or older</p>
+                </li>
+                <li><p>TOS will subject to change depending on commission volume</p>
+                </li>
+                <li><p>I won&#39;t redraw AI artwork nor to draw an artwork resembling another artist&#39;s artwork in style, composition, or specific elements.</p>
+                </li>
+                <li><p>Preferably you have non AI references since it is more clearer and believable in design, pose, and other details. If you have an OC in mind you want me to draw, give me the design sheet if available (AI Generated OC designs is a no go too, sorry).</p>
+                </li>
+                <li><p>I have my right to refuse orders that I am not comfortable completing.</p>
+                </li>
+                </ul>
+                <h4 id="payments">PAYMENTS</h4>
+                <ul>
+                <li><p>You have to pay in full for me to start working on your commission.</p>
+                </li>
+                <li><p>All payments is done through VGen</p>
+                </li>
+                </ul>
+                <h4 id="revisions">REVISIONS</h4>
+                <ul>
+                <li><p>Rough sketch revisions up to 4 times, after that you have to choose between revisions that you 100% sure fits your needs.</p>
+                </li>
+                <li><p>Can only do small revisions during render phase.</p>
+                </li>
+                <li><p>Any changes that&#39;ll change the whole illustration during render cannot be done, thus you may want to ensure that the rough sketch layout is something you 100% approve of!</p>
+                </li>
+                <li><p>If you want to do another version you may want to do additional commission (s).</p>
+                </li>
+                </ul>
+                <h4 id="deadlines-and-delivery">DEADLINES AND DELIVERY</h4>
+                <ul>
+                <li><p>When I start working on your commission, It&#39;ll be worked on around 2 days to 1-2 weeks (depending on the complexity of the commission)</p>
+                </li>
+                <li><p>Timeline</p>
+                <ul>
+                <li><p>1-3 days Sketch Phase</p>
+                </li>
+                <li><p>2-3 days for Bust Up and Icons</p>
+                </li>
+                <li><p>4 days to 2 weeks for Full Renders</p>
+                </li>
+                </ul>
+                </li>
+                </ul>
+                <h4 id="use">USE</h4>
+                <ul>
+                <li><p>Personal use is free. </p>
+                </li>
+                <li><p>Commercial use is for every product purchased made with this artwork, this is intended if you&#39;re gonna use it to sell prints, shirts, and promotional materials.</p>
+                </li>
+                <li><p>Fee for commercial use is 100% the price of the service you asked me for.</p>
+                </li>
+                </ul>
+                <h4 id="intellectual-property-rights">INTELLECTUAL PROPERTY RIGHTS</h4>
+                <ul>
+                <li><p>I hold all rights to the illustration. You may use it for reposting/sharing on social media. Please ask me personally for any questions.</p>
+                </li>
+                <li><p>If the request is a fanart, I may use it to sell prints for example.</p>
+                </li>
+                <li><p>You may repost/share the illustration on social media with proper credit. Any modifications to the artwork must be approved by me.</p>
+                </li>
+                </ul>
+                <h4 id="refunds">REFUNDS</h4>
+                <ul>
+                <li><p>You can only refund if I haven&#39;t started working on the illustration, which I will inform you first.</p>
+                </li>
+                <li><p>You cannot refund me during progress AND after completion, make sure you&#39;ve 100% approve of the drafts I&#39;ll be communicating with you along the way.</p>
+                </li>
+                </ul>
+                <h4 id="communication">COMMUNICATION</h4>
+                <ul>
+                <li>You can contact me through DM/Discord or Email. Expect a response within 24-48 hours range.</li>
+                </ul>
                 <h3 id="FUTURE"> Future Plans </h3>
                 <h4>Will there be more types of commissions coming soon?</h4>
                 <p>Yes, absolutely. But for now I want to test the waters, and am also working on getting used to working on comms and setting a good time schedule alongside comms and other projects.</p>
@@ -141,6 +215,7 @@
         </div>
     </div>
 </div>
+
         <div class="background">
     <img class="align-right bottom-0" src="/assets/images/bg-bottom-0.svg"></img>
 </div>

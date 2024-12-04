@@ -33,6 +33,8 @@
             
             <a class="nav" href="/list-blog.html"><div>BLOG</div></a>
             
+            <a class="nav" href="/commission.html"><div>COMMISSION</div></a>
+            
             <a class="nav" href="/search.html"><div><i class="icon icon_edit-find"></i></div></a>
         </div>
         <a class="nav nav-mobile" onclick="toggleNavOverlay()"><div><i class="icon icon_application-menu"></i></div></a>
@@ -52,6 +54,9 @@
         <a href="/list-blog.html"><div>BLOG</div></a>
         <div class="nav-pad-v"></div>
         
+        <a href="/commission.html"><div>COMMISSION</div></a>
+        <div class="nav-pad-v"></div>
+        
     </div>
     <script type="text/javascript" src="/assets/js/nav.js"></script>
     <script>
@@ -63,6 +68,24 @@
         });
     </script>
 </nav>
+<script src="https://storage.ko-fi.com/cdn/scripts/overlay-widget.js"></script>
+<script>
+  kofiWidgetOverlay.draw('megumumpkin', {
+    'type': 'floating-chat',
+    'floating-chat.donateButton.text': 'Support me',
+    'floating-chat.donateButton.background-color': '#ff0000',
+    'floating-chat.donateButton.text-color': '#fff',
+    'floating-chat.core.position.bottom-left': 'position: fixed; bottom: 50px; right: 10px; width: 160px; height: 65px;'
+  });
+</script>
+<style>
+    .floatingchat-container-wrap { left: unset; right: 50px; width: 50%; }
+    .floatingchat-container-wrap-mobi { left: unset; right: 50px; width: 50%;}
+    .floating-chat-kofi-popup-iframe { left: unset; right: 50px; }
+    .floating-chat-kofi-popup-iframe-mobi { left: unset; right: 50px; }
+    .floating-chat-kofi-popup-iframe-closer-mobi { left: unset; right: 50px; }
+</style>
+
 
         <div class="blog banner">
             <img src="https://nch.pl/s/Sxp3xLjHTBBAGxf/preview"></img>
@@ -81,8 +104,6 @@
                     <p class="tag">UI</p>
                     
                     <p class="tag">UX</p>
-                    
-                    <p class="tag">Featured</p>
                     
                 </div>
             </div>
@@ -242,6 +263,7 @@ License: “Introducing the New Design, with Focus on Maximizing Content Deliver
         </div>
     </div>
 </div>
+
         <div class="background">
     <img class="align-right bottom-0" src="/assets/images/bg-bottom-0.svg"></img>
 </div>
